@@ -1,2 +1,14 @@
-- name: Deploy to Neocities
-  uses: bcomnes/deploy-to-neocities@v1.1.1
+name: Deploy to neocities
+
+# only run on changes to master
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2.4.0
