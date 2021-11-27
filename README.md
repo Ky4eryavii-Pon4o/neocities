@@ -1,3 +1,3 @@
 # neocities
 
-https://patap.neocities.com
+https://patap.neocities.org
