@@ -38,9 +38,70 @@ $ echo "deb http://deb.ocsinventory-ng.org/ubuntu/ focal main" | sudo tee /etc/a
 $ sudo apt update
 </code></pre></div></div>
 
-Then install the agent using :
+Для уставноки ocsinventory-agent введите следующую команду:
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight">
 <code>$ sudo apt install ocsinventory-agent
+</code></pre></div></div>
+<p>После установки будет сразуже предложено настроить агент.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight">
+<code>Do you want to configure the agent
+Please enter 'y' or 'n'?> [y] y
+
+Where do you want to write the configuration file?
+0 -> /etc/ocsinventory
+1 -> /usr/local/etc/ocsinventory
+2 -> /etc/ocsinventory-agent
+?>  1
+
+Do you want to create the directory /etc/ocsinventory?
+Please enter 'y' or 'n'?> [y] y
+
+Should the old unix_agent settings be imported ?
+Please enter 'y' or 'n'?> [y] y
+
+[info] The config file will be written in /etc/ocsinventory/ocsinventory-agent.cfg,
+
+What is the address of your ocs server?>  https://ocs/ocsinventory
+
+Do you need credential for the server? (You probably don't)
+Please enter 'y' or 'n'?> [n]
+
+Do you want to apply an administrative tag on this machine
+Please enter 'y' or 'n'?> [y]
+tag?> NA
+
+Do yo want to install the cron task in /etc/cron.d
+Please enter 'y' or 'n'?> [y]
+
+Where do you want the agent to store its files? (You probably don't need to change it)?> [/var/lib/ocsinventory-agent]
+
+Should I remove the old unix_agent
+Please enter 'y' or 'n'?> [n]
+
+Do you want to activate debug configuration option ?
+Please enter 'y' or 'n'?> [y] n
+
+Do you want to use OCS Inventory NG UNix Unified agent log file ?
+Please enter 'y' or 'n'?> [y]
+
+Specify log file path you want to use?>  /var/log/ocs_agent.log
+
+Do you want disable SSL CA verification configuration option (not recommended) ?
+Please enter 'y' or 'n'?> [n]
+
+Do you want to set CA certificate chain file path ?
+Please enter 'y' or 'n'?> [y] y
+
+Specify CA certificate chain file path?>  /etc/ocsinventory-agent/cacert.pem
+
+Do you want to use OCS-Inventory software deployment feature?
+Please enter 'y' or 'n'?> [y] n
+
+Do you want to use OCS-Inventory SNMP scans feature?
+Please enter 'y' or 'n'?> [y]
+
+Do you want to send an inventory of this machine?
+Please enter 'y' or 'n'?> [y]
 </code></pre></div></div>
 
                 <div class="listing">
